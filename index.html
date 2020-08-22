@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Capstone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="start" class="start">
+      <header><h1>Boredom Buster</h1></header>
+    </section>
+    <hr />
+    <section id="joke" class="jokePage hidden">
+      <h2>Tell me a joke</h2>
+      <button type="submit" class="joke-btn">Joke</button>
+      <div class="joke-results"></div>
+    </section>
+    <hr />
+    <section id="drink" class="hidden">
+      <h2>I deserve a drink</h2>
+      <p>Choose your base:</p>
+
+      <select class="drink-base" id="drink-base">
+        <option value="Vodka">Vodka </option>
+        <option value="Gin">Gin </option>
+        <option value="Rum">Rum </option>
+        <option value="Tequila">Tequila </option>
+        <option value="Brandy">Brandy </option>
+      </select>
+      <button type="submit" class="drink-input">Go!</button>
+
+      <div class="drink-results"></div>
+    </section>
+    <hr />
+    <section id="trivia" class="hidden">
+      <h2>Random Trivia Card</h2>
+      <button type="submit" class="trivia-btn">Test me!</button>
+      <div class="trivia-results">
+        <ul class="trivia-questions"></ul>
+      </div>
+    </section>
+    <hr />
+    <section id="activity" class="hidden">
+      <h2>What should I do?</h2>
+      <label for="activity-input">How many people?</label>
+      <input
+        class="activity-input"
+        type="number"
+        id="myNumber"
+        min="1"
+        max="4"
+      />
+      <button type="submit" class="activity-btn">Go!</button>
+      <div class="activity-results"></div>
+    </section>
+    <hr />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

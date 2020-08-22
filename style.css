@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+}
+
+.drink-results h3 {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
