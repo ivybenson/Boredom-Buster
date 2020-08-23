@@ -48,7 +48,7 @@ function displayActivity(responseJson) {
 //gets activity from bored api - having issues with value
 function getActivity() {
   const activityNumber = $(".activity-input").val();
-  fetch(`http://www.boredapi.com/api/activity/?participants=${activityNumber}`)
+  fetch(`https://www.boredapi.com/api/activity/?participants=${activityNumber}`)
     .then((response) => response.json())
     .then((responseJson) => displayActivity(responseJson));
 }
