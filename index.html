@@ -3,21 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boredom Buster</title>
+    <title>API Capstone</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="start" class="start">
-      <header><h1>Boredom Buster</h1></header>
-    </section>
-    <hr />
-    <section id="joke" class="jokePage hidden">
+    <header><h1>Boredom Buster</h1></header>
+
+    <section id="joke" class="jokePage section1">
       <h2>Tell me a joke</h2>
       <button type="submit" class="joke-btn">Joke</button>
       <div class="joke-results"></div>
     </section>
-    <hr />
-    <section id="drink" class="hidden">
+
+    <section id="drink" class="section2">
       <h2>I deserve a drink</h2>
       <p>Choose your base:</p>
 
@@ -32,16 +30,16 @@
 
       <div class="drink-results"></div>
     </section>
-    <hr />
-    <section id="trivia" class="hidden">
+
+    <section id="trivia" class="section3">
       <h2>Random Trivia Card</h2>
       <button type="submit" class="trivia-btn">Test me!</button>
       <div class="trivia-results">
         <ul class="trivia-questions"></ul>
       </div>
     </section>
-    <hr />
-    <section id="activity" class="hidden">
+
+    <section id="activity" class="section4">
       <h2>What should I do?</h2>
       <label for="activity-input">How many people?</label>
       <input
@@ -54,7 +52,7 @@
       <button type="submit" class="activity-btn">Go!</button>
       <div class="activity-results"></div>
     </section>
-    <hr />
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -63,3 +61,4 @@
     <script src="index.js"></script>
   </body>
 </html>
+
