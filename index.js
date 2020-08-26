@@ -13,7 +13,7 @@ function getJoke() {
 function displayJoke(responseJson) {
   $(".joke-results").empty();
   $(".joke-results").append(`
-    <h3>${responseJson.joke}</h3>
+    <p>${responseJson.joke}</p>
     `);
 }
 
@@ -30,7 +30,7 @@ function displayDrink(responseJson) {
   let randomDrink = Math.floor(Math.random() * responseJson.drinks.length);
   let drink = responseJson.drinks[randomDrink];
   $(".drink-results").html(`
-  <h3><img width="50" src="${drink.strDrinkThumb}" alt="${drink.strDrink}" hspace="20" /><a href="https://thecocktaildb.com/drink/${drink.idDrink}" target="_blank">${drink.strDrink}</a></h3>
+  <h3><img width="75" src="${drink.strDrinkThumb}" alt="${drink.strDrink}" hspace="20" /><a href="https://thecocktaildb.com/drink/${drink.idDrink}" target="_blank">${drink.strDrink}</a></h3>
   `);
 }
 function watchDrink() {
@@ -42,7 +42,7 @@ function watchDrink() {
 function displayActivity(responseJson) {
   $(".activity-results").empty();
   $(".activity-results").append(`
-    <h3>${responseJson.activity}</h3>
+    <p>${responseJson.activity}</p>
     `);
 }
 //gets activity from bored api - having issues with value
@@ -58,7 +58,7 @@ function watchActivity() {
 }
 
 //trivia section
-//displays trivia retrieved from api
+//displays trivia retrieved from api and checks answers
 function displayTrivia(responseJson) {
   console.log("display trivia", responseJson);
   $(".trivia-results").empty();
@@ -68,7 +68,7 @@ function displayTrivia(responseJson) {
   let incorrectAnswers = trivia.incorrect_answers;
   let answerSet = incorrectAnswers.concat(correctAnswer);
   console.log(answerSet);
-  $(".trivia-results").html(`<h3>${trivia.question}</h3>`);
+  $(".trivia-results").html(`<p>${trivia.question}</p>`);
   for (let i = 0; i < answerSet.length; i++) {
     $(".trivia-results").append(`<li>
     <input type="radio" name="choice" id="${i}" value="${answerSet[i]}" required/>
@@ -86,10 +86,10 @@ function displayTrivia(responseJson) {
       console.log(guess);
       $(".trivia-results").empty();
       if (guess == correctAnswer) {
-        $(".trivia-results").html(`<p>You are correct</p>`);
+        $(".trivia-results").html(`<p>You are correct!</p>`);
       } else {
         $(".trivia-results").html(
-          `<p>Sorry you are wrong, the correct answer is ${correctAnswer}`
+          `<p>Sorry you are wrong, the correct answer is ${correctAnswer}.`
         );
       }
     });
@@ -113,3 +113,4 @@ function runApp() {
 }
 
 $(runApp);
+
