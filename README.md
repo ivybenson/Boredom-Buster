@@ -11,3 +11,5 @@ Entertain yourself four ways on one platform:
 - Find something to do with your time in the activity square - customizable number of people up to four.
 
 [Boredom Buster](https://ivybenson.github.io/boredom-buster/)
+
+![Bordeom Buster App](https://github.com/ivybenson/boredom-buster/images/boredom-buster.png)
