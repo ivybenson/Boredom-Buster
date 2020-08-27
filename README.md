@@ -10,6 +10,8 @@ Entertain yourself four ways on one platform:
 - Quiz yourself with a trivia card. The cards vary in difficulty so watch out!
 - Find something to do with your time in the activity square - customizable number of people up to four.
 
+This app was created using HTML, CSS, Javascript, and jQuery.
+
 [Boredom Buster](https://ivybenson.github.io/boredom-buster/)
 
 ![Boredom Buster App](images/boredom-buster.png)
