@@ -12,4 +12,4 @@ Entertain yourself four ways on one platform:
 
 [Boredom Buster](https://ivybenson.github.io/boredom-buster/)
 
-![Boredom Buster App](https://github.com/ivybenson/boredom-buster/images/boredom-buster.png?raw=true)
+![Boredom Buster App](images/boredom-buster.png)
