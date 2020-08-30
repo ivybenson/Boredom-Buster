@@ -20,11 +20,13 @@ function displayJoke(responseJson) {
 //drink section
 //get drink recipe from cocktail api
 function getDrink() {
-  const drinkBase = $(".drink-base").val();
+  const drinkBase = $("#drink-base").val();
+
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drinkBase}`)
     .then((response) => response.json())
     .then((responseJson) => displayDrink(responseJson));
 }
+//display drink from cocktail api
 function displayDrink(responseJson) {
   $("drink-results").empty();
   let randomDrink = Math.floor(Math.random() * responseJson.drinks.length);
@@ -33,6 +35,7 @@ function displayDrink(responseJson) {
   <h3><img width="75" src="${drink.strDrinkThumb}" alt="${drink.strDrink}" hspace="20" /><a href="https://thecocktaildb.com/drink/${drink.idDrink}" target="_blank">${drink.strDrink}</a></h3>
   `);
 }
+//watches drink button
 function watchDrink() {
   $(".drink-input").click((event) => getDrink());
 }
@@ -70,9 +73,9 @@ function displayTrivia(responseJson) {
   console.log(answerSet);
   $(".trivia-results").html(`<p>${trivia.question}</p>`);
   for (let i = 0; i < answerSet.length; i++) {
-    $(".trivia-results").append(`<li>
+    $(".trivia-results").append(`<form><li>
     <input type="radio" name="choice" id="${i}" value="${answerSet[i]}" required/>
-    <label>${answerSet[i]}</label></li>`);
+    <label>${answerSet[i]}</label></li></form>`);
   }
   $(".trivia-results").append(
     `<button type="submit" class="trivia-submit">Check Answer</button>`
@@ -105,7 +108,18 @@ function watchTrivia() {
   $(".trivia-btn").click((event) => getTrivia());
 }
 
+function startPage() {
+  $(".start").click((e) => {
+    $("#joke").removeClass("hidden");
+    $("#drink").removeClass("hidden");
+    $("#trivia").removeClass("hidden");
+    $("#activity").removeClass("hidden");
+    $("#start").addClass("hidden");
+  });
+}
+
 function runApp() {
+  startPage();
   getJoke();
   watchTrivia();
   watchActivity();
