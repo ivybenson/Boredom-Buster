@@ -17,19 +17,29 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee74fc', endColorstr='#1e69de',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   min-height: 100vh;
+}
+
+.hidden {
+  display: none;
 }
 
 h1 {
   text-align: center;
   color: white;
+  font-size: medium;
+}
+
+h2 {
+  font-size: medium;
 }
 
 .drink-results h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: medium;
 }
 
 li {
@@ -50,7 +60,7 @@ main {
 section {
   width: 40%;
   min-width: 200px;
-  margin: 10px 2.5%;
+  margin: 6px 2.5%;
   text-align: center;
   background-color: white;
   border-radius: 20px;
