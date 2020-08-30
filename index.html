@@ -9,29 +9,36 @@
   <body>
     <header><h1>Boredom Buster</h1></header>
     <main>
-      <section id="joke" class="jokePage section1">
+      <section id="start" class="start">
+        <p>Apply your mind with some mindless fun!</p>
+        <p>
+          Laugh at some jokes, mix up a drink, test yourself with trivia, and
+          find something to do with Boredom Buster.
+        </p>
+        <button type="submit" id="start">Start</button>
+      </section>
+
+      <section id="joke" class="jokePage hidden section1">
         <h2>Tell me a joke!</h2>
         <button type="submit" class="joke-btn">Joke</button>
         <div class="joke-results"></div>
       </section>
 
-      <section id="drink" class="section2">
+      <section id="drink" class="section2 hidden">
         <h2>I deserve a drink</h2>
-        
-        <label><p>Choose your base:</p></label>
-          <select class="drink-base" id="drink-base">
-            <option value="Vodka">Vodka </option>
-            <option value="Gin">Gin </option>
-            <option value="Rum">Rum </option>
-            <option value="Tequila">Tequila </option>
-            <option value="Brandy">Brandy </option>
-          </select>
-          <button type="submit" class="drink-input">Go!</button>
-        
+        <label for="drink-base"><p>Choose your base:</p></label>
+        <select class="drink-base" id="drink-base">
+          <option value="Vodka">Vodka </option>
+          <option value="Gin">Gin </option>
+          <option value="Rum">Rum </option>
+          <option value="Tequila">Tequila </option>
+          <option value="Brandy">Brandy </option>
+        </select>
+        <button type="submit" class="drink-input">Go!</button>
         <div class="drink-results"></div>
       </section>
 
-      <section id="trivia" class="section3">
+      <section id="trivia" class="section3 hidden">
         <h2>Random Trivia Card</h2>
         <button type="submit" class="trivia-btn">Test me!</button>
         <div class="trivia-results">
@@ -39,11 +46,11 @@
         </div>
       </section>
 
-      <section id="activity" class="section4">
+      <section id="activity" class="section4 hidden">
         <h2>What should I do?</h2>
         <form>
           <label for="activity-input">How many people?</label>
-          <select class="activity-input" type="number">
+          <select id="activity-input" class="activity-input" type="number">
             <option value="1">1 </option>
             <option value="2">2 </option>
             <option value="3">3 </option>
@@ -63,5 +70,4 @@
     <script src="index.js"></script>
   </body>
 </html>
-
 
