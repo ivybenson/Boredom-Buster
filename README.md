@@ -12,6 +12,6 @@ Entertain yourself four ways on one platform:
 
 This app was created using HTML, CSS, Javascript, and jQuery.
 
-[Boredom Buster](https://ivybenson.github.io/boredom-buster/)
+[Boredom Buster](https://ivybenson.github.io/Boredom-Buster/)
 
 ![Boredom Buster App](images/boredom-buster.png)
